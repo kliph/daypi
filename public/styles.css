@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url("shreddin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.text {
+  color: #fff;
+  font-family: futura;
+  font-size: 5em;
+}
