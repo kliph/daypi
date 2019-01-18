@@ -1,4 +1,8 @@
 require 'sinatra'
+require 'week_of_month'
+
+# Weeks start on Monday
+WeekOfMonth.configuration.monday_active = true
 
 DAYS = %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
 
@@ -13,7 +17,7 @@ end
 
 def date_to_daypi(date)
   month_part = month_to_daypi(date.month)
-  week_part = week_of_month_to_daypi(date.strftime('%W').to_i)
+  week_part = week_of_month_to_daypi(date.week_of_month - 1)
   day_part = date.strftime('%A')
   { month_part: month_part, week_part: week_part, day_part: day_part }
 end
