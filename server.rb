@@ -15,9 +15,9 @@ def date_to_daypi(date)
   month_part = month_to_daypi(date.month)
   week_part = week_of_month_to_daypi(date.strftime('%W').to_i)
   day_part = date.strftime('%A')
-  month_part + week_part + day_part
+  { month_part: month_part, week_part: week_part, day_part: day_part }
 end
 
 get '/' do
-  erb :index, locals: { date: date_to_daypi(Date.today) }
+  erb :index, locals: date_to_daypi(Date.today)
 end
