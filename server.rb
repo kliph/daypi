@@ -33,3 +33,7 @@ end
 get '/month/:month/day/:day' do
   erb :index, locals: date_to_daypi(Date.new(Date.today.year, params['month'].to_i, params['day'].to_i))
 end
+
+get '/year/:year/month/:month/day/:day' do
+  erb :index, locals: date_to_daypi(Date.new(params['year'].to_i, params['month'].to_i, params['day'].to_i))
+end
