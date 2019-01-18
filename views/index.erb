@@ -4,10 +4,13 @@
     <link rel="stylesheet" type="text/css" href="/styles.css" />
   </head>
   <body>
+    <input type="checkbox" id="toggle" />
     <div class="wrapper">
-      <div class="text">
-        <span><%= month_part %></span><span><%= week_part %></span><span><%= day_part %></span>
-      </div>
+      <label for="toggle">
+        <div class="text">
+          <span><%= month_part %></span><span><%= week_part %></span><span><%= day_part %></span>
+        </div>
+      </label>
     </div>
   </body>
 </html>
