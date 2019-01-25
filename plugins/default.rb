@@ -1,7 +1,6 @@
 module Plugins
   module Default
-
-    DAYS = %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
+    DAYS = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].freeze
 
     def self.month_to_daypi(ordinal_month)
       idx = ordinal_month - 1
