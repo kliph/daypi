@@ -21,5 +21,41 @@ body {
   color: #fff;
   text-shadow: 5px 5px 10px black;
   font-family: futura;
-  font-size: 3em;
+  font-size: 2.8em;
+}
+
+@media (max-width:900px){
+  .text {
+    font-size: 2.4em;
+  }
+}
+
+@media (max-width:800px){
+  .text {
+    font-size: 2em;
+    transform: rotate(-20deg);
+  }
+}
+
+@media (max-width:640px){
+  .text {
+    font-size: 1.6em;
+    transform: rotate(-20deg);
+  }
+}
+
+
+@media (max-width:510px){
+  .text {
+    font-size: 1.6em;
+    transform: rotate(-40deg);
+  }
+}
+
+
+@media (max-width:370px){
+  .text {
+    font-size: 3em;
+    transform: rotate(-70deg);
+  }
 }
