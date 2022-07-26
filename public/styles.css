@@ -2,6 +2,10 @@ html {
   height: 100%;
 }
 
+#__next {
+  height: 100%;
+}
+
 body {
   background-image: url("shreddin.jpg");
   background-size: cover;
