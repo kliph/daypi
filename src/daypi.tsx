@@ -18,18 +18,18 @@ const monthToDaypi = (ordinalMonth: number) => {
 };
 
 const weekOfMonthToDaypi = (ordinalWeekOfMonth: number) => {
-  return DAYS[ordinalWeekOfMonth - 1];
+  return DAYS[ordinalWeekOfMonth];
 };
 
 const dateToDaypi = (date: Date) => {
   const monthPart = monthToDaypi(getMonth(date));
-  const weekPart = weekOfMonthToDaypi(getWeekOfMonth(date));
+  const weekPart = weekOfMonthToDaypi(getWeekOfMonth(date, { weekStartsOn: 1 }) - 1);
   const dayPart = format(date, "eeee");
   return { monthPart, dayPart, weekPart };
 };
 
-const Daypi = () => {
-  const { monthPart, dayPart, weekPart } = dateToDaypi(new Date());
+const Daypi = ({ date }: { date: Date }) => {
+  const { monthPart, dayPart, weekPart } = dateToDaypi(date);
   return (
     <div className="wrapper">
       <div className="text">
