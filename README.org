@@ -1,9 +1,9 @@
 * Daypi: the Mondaypi of its kind
 * Installing dependencies
 #+BEGIN_SRC sh
-  bundle
+  yarn
 #+END_SRC
 * Running locally
 #+BEGIN_SRC sh
-  ruby server.rb
+  yarn dev
 #+END_SRC
